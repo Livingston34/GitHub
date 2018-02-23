@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.baidu.com/"/>
-  <updated>2018-02-23T08:06:19.208Z</updated>
+  <updated>2018-02-23T09:26:48.447Z</updated>
   <id>http://www.baidu.com/</id>
   
   <author>
@@ -21,20 +21,22 @@
     <link href="http://www.baidu.com/2018/02/23/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8A%93%E5%8C%85%E8%BD%AF%E4%BB%B6/"/>
     <id>http://www.baidu.com/2018/02/23/常用的抓包软件/</id>
     <published>2018-02-23T08:01:36.033Z</published>
-    <updated>2018-02-23T08:06:19.208Z</updated>
+    <updated>2018-02-23T09:26:48.447Z</updated>
     
-    <content type="html"><![CDATA[<p>做web开发或者app开发的时候，经常会有抓包的需求。下面总结一下我用过的抓包工具，并分析一下优缺点。</p><h1 id="WireShark"><a href="#WireShark" class="headerlink" title="WireShark"></a>WireShark</h1><p>Wireshark一直是用的最爽的一个工具，在mac和windows下都有一致的界面。但是，Wireshark没有自带proxy，因此需要自己搭建proxy。</p><h1 id="Fiddler"><a href="#Fiddler" class="headerlink" title="Fiddler"></a>Fiddler</h1><p>最好用的抓包工具，支持https、proxy。但是是基于.Net 技术开发的，没办法直接在 Mac/Linux 下使用。</p><h1 id="Charles"><a href="#Charles" class="headerlink" title="Charles"></a>Charles</h1><p>自带proxy，支持拦截并修改response，非常好用的一个工具，支持mac。<br>但是只有30天试用，收费的是50刀。网上有免费得注册码。一个缺陷是，很容易丢包。<br>像高德地图的api一个都没抓到，百度地图的却都抓到了。<br>Charles支持Https抓包，但需要在手机上安装一个证书（如果不安转这个证书，在Charles中看到的request和response是乱码）</p>]]></content>
+    <content type="html"><![CDATA[<p>做web开发或者app开发的时候，经常会有抓包的需求。下面总结一下我用过的抓包工具，并分析一下优缺点。<br><a id="more"></a></p><h1 id="WireShark"><a href="#WireShark" class="headerlink" title="WireShark"></a>WireShark</h1><p>Wireshark一直是用的最爽的一个工具，在mac和windows下都有一致的界面。但是，Wireshark没有自带proxy，因此需要自己搭建proxy。</p><h1 id="Fiddler"><a href="#Fiddler" class="headerlink" title="Fiddler"></a>Fiddler</h1><p>最好用的抓包工具，支持https、proxy。但是是基于.Net 技术开发的，没办法直接在 Mac/Linux 下使用。</p><h1 id="Charles"><a href="#Charles" class="headerlink" title="Charles"></a>Charles</h1><p>自带proxy，支持拦截并修改response，非常好用的一个工具，支持mac。<br>但是只有30天试用，收费的是50刀。网上有免费得注册码。一个缺陷是，很容易丢包。<br>像高德地图的api一个都没抓到，百度地图的却都抓到了。<br>Charles支持Https抓包，但需要在手机上安装一个证书（如果不安转这个证书，在Charles中看到的request和response是乱码）</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;做web开发或者app开发的时候，经常会有抓包的需求。下面总结一下我用过的抓包工具，并分析一下优缺点。&lt;/p&gt;
-&lt;h1 id=&quot;WireShark&quot;&gt;&lt;a href=&quot;#WireShark&quot; class=&quot;headerlink&quot; title=&quot;WireShark&quot;&gt;&lt;/a&gt;
-      
+      &lt;p&gt;做web开发或者app开发的时候，经常会有抓包的需求。下面总结一下我用过的抓包工具，并分析一下优缺点。&lt;br&gt;
     
     </summary>
     
+    
+      <category term="标签1" scheme="http://www.baidu.com/tags/%E6%A0%87%E7%AD%BE1/"/>
+    
+      <category term="标签2" scheme="http://www.baidu.com/tags/%E6%A0%87%E7%AD%BE2/"/>
+    
+      <category term="标签3" scheme="http://www.baidu.com/tags/%E6%A0%87%E7%AD%BE3/"/>
     
   </entry>
   
