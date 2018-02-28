@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?042601facf214569404f852760199951"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>美团2017校招笔试（大富翁游戏） | Livingston | “你没车没房没卡,拿什么和我谈恋爱？”“......我有高达......”</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#00ffff">
+    
+    
+    <meta name="keywords" content="算法,笔试,美团">
+    <meta name="description" content="大富翁游戏，玩家根据骰子的点数决定走的步数，即骰子点数为1时可以走一步，点数为2时可以走两步，点数为n时可以走n步。求玩家走到第n步（n&amp;lt;=骰子最大点数且是方法的唯一入参）时，总共有多少种投骰子的方法。">
+<meta name="keywords" content="算法,笔试,美团">
+<meta property="og:type" content="article">
+<meta property="og:title" content="美团2017校招笔试（大富翁游戏）">
+<meta property="og:url" content="http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/index.html">
+<meta property="og:site_name" content="Livingston">
+<meta property="og:description" content="大富翁游戏，玩家根据骰子的点数决定走的步数，即骰子点数为1时可以走一步，点数为2时可以走两步，点数为n时可以走n步。求玩家走到第n步（n&amp;lt;=骰子最大点数且是方法的唯一入参）时，总共有多少种投骰子的方法。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-28T06:51:00.096Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="美团2017校招笔试（大富翁游戏）">
+<meta name="twitter:description" content="大富翁游戏，玩家根据骰子的点数决定走的步数，即骰子点数为1时可以走一步，点数为2时可以走两步，点数为n时可以走n步。求玩家走到第n步（n&amp;lt;=骰子最大点数且是方法的唯一入参）时，总共有多少种投骰子的方法。">
+    
+        <link rel="alternate" type="application/atom+xml" title="Livingston" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">杨霁</h5>
+          <a href="mailto:24136144@qq.com" title="24136144@qq.com" class="mail">24136144@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Livingston34" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">美团2017校招笔试（大富翁游戏）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">美团2017校招笔试（大富翁游戏）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-02-28T03:31:19.985Z" itemprop="datePublished" class="page-time">
+  2018-02-28
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/算法/">算法</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#输入描述"><span class="post-toc-text">输入描述</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#输出描述"><span class="post-toc-text">输出描述</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#输入例子"><span class="post-toc-text">输入例子</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#输出例子"><span class="post-toc-text">输出例子</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#分析"><span class="post-toc-text">分析</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#计算通项式"><span class="post-toc-text">计算通项式</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#实现"><span class="post-toc-text">实现</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-美团2017校招笔试（大富翁游戏）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">美团2017校招笔试（大富翁游戏）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-02-28 11:31:19" datetime="2018-02-28T03:31:19.985Z"  itemprop="datePublished">2018-02-28</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/算法/">算法</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>大富翁游戏，玩家根据骰子的点数决定走的步数，即骰子点数为1时可以走一步，点数为2时可以走两步，点数为n时可以走n步。求玩家走到第n步（n&lt;=骰子最大点数且是方法的唯一入参）时，总共有多少种投骰子的方法。<br><a id="more"></a></p>
+<h1 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h1><blockquote>
+<p>输入包括一个整数n,(1 ≤ n ≤ 6)</p>
+</blockquote>
+<h1 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h1><blockquote>
+<p>输出一个整数,表示投骰子的方法</p>
+</blockquote>
+<h1 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子"></a>输入例子</h1><blockquote>
+<p>6</p>
+</blockquote>
+<h1 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子"></a>输出例子</h1><blockquote>
+<p>32</p>
+</blockquote>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><blockquote>
+<p>f(n)=f(n-1)+f(n-2)+…+1;<br>  在玩家走到第n步的情况，<br>  可能是先走了n-1步，剩下1步到达；<br>  也可能是先走n-2步，剩下再走2步到达；<br>  …；<br>  也可能是先走了1步，剩下再走n-1步。</p>
+</blockquote>
+<p>  即 f(n) 是f(n-1)…f(1)的情况相加，再加上最后一步。<br>  则f(n) = f(n-1) + f(n-2) + … + f(1) + 1</p>
+<h1 id="计算通项式"><a href="#计算通项式" class="headerlink" title="计算通项式"></a>计算通项式</h1><blockquote>
+<p>f(n) = f(n-1) + f(n-2) + … + f(1) + 1  ①<br>  f(n-1) = f(n-2) + f(n-3) + … + f(1) + 1  ②<br>  那么② - ①得出 f(n) = 2 * f(n-1)<br>  利用数列的递推公式<br>  f(n) / f(n-1) = 2;<br>  f(n-1) / f(n-2) = 2;<br>  …<br>  f(2) / f(1) = 2;<br>  相乘后f(n) / f(1) = 2^(n-1)<br>  由于f(1) = 1<br>  所以f(n) = 2^(n-1)</p>
+</blockquote>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public long monopoly(int step) &#123;</span><br><span class="line">    return (long) Math.pow(2 , step - 1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void main(String args[]) &#123;  </span><br><span class="line">    System.out.println(&quot;投骰子的方法有&quot; + monopoly(6) + &quot;种&quot;);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-02-28T06:51:00.096Z" itemprop="dateUpdated">2018-02-28 14:51:00</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/02/28/美团2017校招笔试（大富翁游戏）/" target="_blank" rel="external">http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.baidu.com">
+            <img src="/img/avatar.png" alt="杨霁">
+            杨霁
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔试/">笔试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/美团/">美团</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/&title=《美团2017校招笔试（大富翁游戏）》 — Livingston&pic=http://www.baidu.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/&title=《美团2017校招笔试（大富翁游戏）》 — Livingston&source=大富翁游戏，玩家根据骰子的点数决定走的步数，即骰子点数为1时可以走一步，点数为2时可以走两步，点数为n时可以走n步。求玩家走到第n步（n&lt;=骰子最大..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《美团2017校招笔试（大富翁游戏）》 — Livingston&url=http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/&via=http://www.baidu.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/02/28/美团2017校招笔试（最大矩形面积）/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> 上一篇</div>
+        <h4 class="title">美团2017校招笔试（最大矩形面积）</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/02/28/美团2016招聘笔试（股票交易日）/" id="post-next" class="post-nav-link">
+        <div class="tips">下一篇 <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">美团2016招聘笔试（股票交易日）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'true';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷打赏
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?042601facf214569404f852760199951"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    </div>
+    <div class="bottom">
+        <p><span>杨霁 &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/&title=《美团2017校招笔试（大富翁游戏）》 — Livingston&pic=http://www.baidu.com/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/&title=《美团2017校招笔试（大富翁游戏）》 — Livingston&source=大富翁游戏，玩家根据骰子的点数决定走的步数，即骰子点数为1时可以走一步，点数为2时可以走两步，点数为n时可以走n步。求玩家走到第n步（n&lt;=骰子最大..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《美团2017校招笔试（大富翁游戏）》 — Livingston&url=http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/&via=http://www.baidu.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.baidu.com/2018/02/28/美团2017校招笔试（大富翁游戏）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsklEQVR42u3awY6sMAwEQP7/p3ev77Aw3XEy4kmV02iEIJUDNravK14//6y7/+/W8/XPz0qu37Dw8PDwBlu/u12yoefjeAbf/fP8OzoCPDw8vGO8503n1Pya9s53+/lgwcPDw3sZr33RJwGpDRh4eHh4/wtvHgzaggUeHh7e23iT13S7uTw8JKWNbbUWPDw8vANdpPf8PtLfw8PDwxt31fOiw9oLeq2oUewWDw8P7wAvf+GujQ6021prjH3YJx4eHt4BXvLZP0cmm3h+1nywAA8PD28vL//sX6t5rJWG8ybZh13h4eHhbeK1qXBbRGi3mwen6Mjw8PDwjvHyIadi1CkIPGtDAxsaYHh4eHibeGupcD4OlR/KvPH2R38PDw8PbxNvbcgpKSvkYWNXcwsPDw/vm7xdhdS8nFFs6FytGg8PD2/cJ2ofsxZC2tCSlEuioQE8PDy8w7z2Fm0AaIerRjvEw8PD28pr211tiTZPuyfpeD1HhoeHhzfuubdNphYzGbdaKwrj4eHhfYf3/OCklJCXKuZX1v09PDw8vAO8JNVeCyf5PRN8nYLj4eHhHeC1jasWOSlP5Ck1Hh4e3vd5k/bVpFWWlGLXhgzw8PDwTvCS4mxe3m1Hr3YVJm4PCA8PD+8Abz5SMC9krMWxtaPEw8PD28WbFAja5DhppE3KH9da5MHDw8Mb89rUeX5AbYuroOLh4eF9hbfW3LrKlR/cKMDg4eHhbeX9lCtPo9cCSZI6FyVjPDw8vAO8SeEgeXE/H01brp0PZuHh4eHt4uXBoH1xt6GlHVaImmp4eHh4x3i7BgjyMJAc0zVfeHh4eC/gJYw8Hd/7TXDbAMPDw8N7DS/f+mSLebK+OTDg4eHhlS38/NXflhjahlmeMxczZXh4eHgD3vwW7UFMEvEjCw8PDy9dv3zEzxSsByh3AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '终于知道死回来啊!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
