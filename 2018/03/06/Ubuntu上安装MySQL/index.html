@@ -18,25 +18,24 @@
     
     
     
-    <title>搜狐2016招聘笔试题（扎金花） | Livingston | “你没车没房没卡,拿什么和我谈恋爱？”“......我有高达......”</title>
+    <title>Ubuntu上安装MySQL | Livingston | “你没车没房没卡,拿什么和我谈恋爱？”“......我有高达......”</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="算法,笔试,搜狐">
-    <meta name="description" content="两个搜狐的程序员加了一个月班，终于放假了，于是他们决定扎金花渡过愉快的假期 。">
-<meta name="keywords" content="算法,笔试,搜狐">
+    <meta name="keywords" content="">
+    <meta name="description" content="MySQL是流行的数据库系统，下面记录了在Ubuntu 16.04上安装MySQL步骤。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搜狐2016招聘笔试题（扎金花）">
-<meta property="og:url" content="https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/index.html">
+<meta property="og:title" content="Ubuntu上安装MySQL">
+<meta property="og:url" content="https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/index.html">
 <meta property="og:site_name" content="Livingston">
-<meta property="og:description" content="两个搜狐的程序员加了一个月班，终于放假了，于是他们决定扎金花渡过愉快的假期 。">
+<meta property="og:description" content="MySQL是流行的数据库系统，下面记录了在Ubuntu 16.04上安装MySQL步骤。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-28T07:22:33.961Z">
+<meta property="og:updated_time" content="2018-03-06T02:41:10.839Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搜狐2016招聘笔试题（扎金花）">
-<meta name="twitter:description" content="两个搜狐的程序员加了一个月班，终于放假了，于是他们决定扎金花渡过愉快的假期 。">
+<meta name="twitter:title" content="Ubuntu上安装MySQL">
+<meta name="twitter:description" content="MySQL是流行的数据库系统，下面记录了在Ubuntu 16.04上安装MySQL步骤。">
     
         <link rel="alternate" type="application/atom+xml" title="Livingston" href="/atom.xml">
     
@@ -119,7 +118,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">搜狐2016招聘笔试题（扎金花）</div>
+        <div class="flex-col header-title ellipsis">Ubuntu上安装MySQL</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -141,15 +140,13 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">搜狐2016招聘笔试题（扎金花）</h1>
+        <h1 class="title">Ubuntu上安装MySQL</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-02-28T07:19:04.585Z" itemprop="datePublished" class="page-time">
-  2018-02-28
+                <time datetime="2018-03-06T02:16:49.162Z" itemprop="datePublished" class="page-time">
+  2018-03-06
 </time>
 
-
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/算法/">算法</a></li></ul>
 
             
         </h5>
@@ -166,22 +163,20 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>目录</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#游戏规则"><span class="post-toc-number">1.</span> <span class="post-toc-text">游戏规则</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#输入描述"><span class="post-toc-number">2.</span> <span class="post-toc-text">输入描述</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#输出描述"><span class="post-toc-number">3.</span> <span class="post-toc-text">输出描述</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#输入例子"><span class="post-toc-number">4.</span> <span class="post-toc-text">输入例子</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#输出例子"><span class="post-toc-number">5.</span> <span class="post-toc-text">输出例子</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#更新软件包"><span class="post-toc-number">1.</span> <span class="post-toc-text">更新软件包</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#初始化安全脚本"><span class="post-toc-number">3.</span> <span class="post-toc-text">初始化安全脚本</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#登录"><span class="post-toc-number">4.</span> <span class="post-toc-text">登录</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#查看端口号"><span class="post-toc-number">5.</span> <span class="post-toc-text">查看端口号</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#启动mysql"><span class="post-toc-number">6.</span> <span class="post-toc-text">启动mysql</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#停止mysql"><span class="post-toc-number">7.</span> <span class="post-toc-text">停止mysql</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#重启mysql"><span class="post-toc-number">8.</span> <span class="post-toc-text">重启mysql</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#问题"><span class="post-toc-number">9.</span> <span class="post-toc-text">问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2003错误"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">2003错误</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决方法"><span class="post-toc-number">9.1.1.</span> <span class="post-toc-text">解决方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#步骤"><span class="post-toc-number">9.1.2.</span> <span class="post-toc-text">步骤</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-搜狐2016招聘笔试题（扎金花）"
+<article id="post-Ubuntu上安装MySQL"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">搜狐2016招聘笔试题（扎金花）</h1>
+        <h1 class="post-card-title">Ubuntu上安装MySQL</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-02-28 15:19:04" datetime="2018-02-28T07:19:04.585Z"  itemprop="datePublished">2018-02-28</time>
+            <time class="post-time" title="2018-03-06 10:16:49" datetime="2018-03-06T02:16:49.162Z"  itemprop="datePublished">2018-03-06</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/算法/">算法</a></li></ul>
-
 
 
             
@@ -192,24 +187,51 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <script src="\assets\js\APlayer.min.js"> </script><p>两个搜狐的程序员加了一个月班，终于放假了，于是他们决定扎金花渡过愉快的假期 。<br><a id="more"></a></p>
-<h1 id="游戏规则"><a href="#游戏规则" class="headerlink" title="游戏规则"></a>游戏规则</h1><p>共52张普通牌，牌面为2,3,4,5,6,7,8,9,10,J,Q,K,A之一，大小递增，各四张； 每人抓三张牌。两人比较手中三张牌大小，大的人获胜。</p>
-<p>对于牌型的规则如下:</p>
-<blockquote>
-<p>1.三张牌一样即为豹子<br>  2.三张牌相连为顺子（A23不算顺子）<br>  3.有且仅有两张牌一样为对子 豹子&gt;顺子&gt;对子&gt;普通牌型 在牌型一样时，比较牌型数值大小（如AAA&gt;KKK,QAK&gt;534，QQ2&gt;10104） 在二人均无特殊牌型时，依次比较三张牌中最大的。大的人获胜，如果最大的牌一样，则比较第二大，以此类推（如37K&gt;89Q） 如二人牌面相同，则为平局。</p>
+            <script src="\assets\js\APlayer.min.js"> </script><p>MySQL是流行的数据库系统，下面记录了在Ubuntu 16.04上安装MySQL步骤。</p>
+<a id="more"></a>
+<h1 id="更新软件包"><a href="#更新软件包" class="headerlink" title="更新软件包"></a>更新软件包</h1><blockquote>
+<p>su apt update</p>
 </blockquote>
-<h1 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h1><blockquote>
-<p>输入两个字符串代表两个玩家的牌（如”10KQ” “354”），先输入的作为玩家1，后输入的作为玩家2</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><blockquote>
+<p>apt install mysql-server mysql-client</p>
 </blockquote>
-<h1 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h1><blockquote>
-<p>1 代表 玩家1赢 0 代表 平局 -1 代表 玩家2赢 -2 代表不合法的输入</p>
+<p>在安装过程中需要你输入MySQL管理员用户（root）密码。</p>
+<h1 id="初始化安全脚本"><a href="#初始化安全脚本" class="headerlink" title="初始化安全脚本"></a>初始化安全脚本</h1><blockquote>
+<p>mysql_secure_installation</p>
 </blockquote>
-<h1 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子"></a>输入例子</h1><blockquote>
-<p>KQ3 3Q9<br>  10QA 6102<br>  5810 7KK<br>  632 74J<br>  10102 K77<br>  JKJ 926<br>  68K 27A</p>
+<h1 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h1><blockquote>
+<p>mysql -u root -p<br>输入root密码</p>
 </blockquote>
-<h1 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子"></a>输出例子</h1><blockquote>
-<p>1<br>  1<br>  -1<br>  -1<br>  1<br>  1<br>  -1</p>
+<ul>
+<li>-u 表示选择登陆的用户名</li>
+<li>-p 表示登陆的用户密码</li>
+</ul>
+<h1 id="查看端口号"><a href="#查看端口号" class="headerlink" title="查看端口号"></a>查看端口号</h1><blockquote>
+<p>show global variables like ‘port’;</p>
 </blockquote>
+<h1 id="启动mysql"><a href="#启动mysql" class="headerlink" title="启动mysql"></a>启动mysql</h1><blockquote>
+<p>service mysqld start </p>
+</blockquote>
+<h1 id="停止mysql"><a href="#停止mysql" class="headerlink" title="停止mysql"></a>停止mysql</h1><blockquote>
+<p>service mysqld stop </p>
+</blockquote>
+<h1 id="重启mysql"><a href="#重启mysql" class="headerlink" title="重启mysql"></a>重启mysql</h1><blockquote>
+<p>service mysqld restart </p>
+</blockquote>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="2003错误"><a href="#2003错误" class="headerlink" title="2003错误"></a>2003错误</h2><p>利用navicat for mysql 远程连接数据库时，输入主机名、密码以及端口后，连接测试时，出现<br>2003-Can’t connect to Mysql on ‘主机名’(10061)问题。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>原因是ubuntu系统的mysql不允许被远程连接操作，所以需要修改mysql配置文件。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><blockquote>
+<ul>
+<li>cd /etc/mysql</li>
+<li>5.6版本及以下</li>
+<li>vim my.cnf  bind-address = 127.0.0.1 改成 0.0.0.0</li>
+<li>5.7版本及以上 </li>
+<li>vim mysql.conf.d/mysqld.cnf bind-address = 127.0.0.1 改成 0.0.0.0</li>
+<li>重启Mysql</li>
+<li>service mysql restart</li>
+</ul>
+</blockquote>
+<p>这样问题就解决了</p>
 
         </div>
 
@@ -218,7 +240,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-02-28T07:22:33.961Z" itemprop="dateUpdated">2018-02-28 15:22:33</time>
+    最后更新时间：<time datetime="2018-03-06T02:41:10.839Z" itemprop="dateUpdated">2018-03-06 10:41:10</time>
 </span><br>
 
 
@@ -235,8 +257,6 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搜狐/">搜狐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔试/">笔试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
-
 
             
 <div class="page-share-wrap">
@@ -245,7 +265,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/&title=《搜狐2016招聘笔试题（扎金花）》 — Livingston&pic=https://github.com/Livingston34/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/&title=《Ubuntu上安装MySQL》 — Livingston&pic=https://github.com/Livingston34/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -255,22 +275,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/&title=《搜狐2016招聘笔试题（扎金花）》 — Livingston&source=两个搜狐的程序员加了一个月班，终于放假了，于是他们决定扎金花渡过愉快的假期 。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/&title=《Ubuntu上安装MySQL》 — Livingston&source=MySQL是流行的数据库系统，下面记录了在Ubuntu 16.04上安装MySQL步骤。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《搜狐2016招聘笔试题（扎金花）》 — Livingston&url=https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/&via=https://github.com/Livingston34" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ubuntu上安装MySQL》 — Livingston&url=https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/&via=https://github.com/Livingston34" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -290,21 +310,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/02/28/二分查找法/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> 上一篇</div>
-        <h4 class="title">二分查找法</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/02/28/美团2017校招笔试（最大矩形面积）/" id="post-next" class="post-nav-link">
+      <a href="/2018/03/05/杨辉三角/" id="post-next" class="post-nav-link">
         <div class="tips">下一篇 <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">美团2017校招笔试（最大矩形面积）</h4>
+        <h4 class="title">杨辉三角</h4>
       </a>
     </div>
   
@@ -413,7 +426,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/&title=《搜狐2016招聘笔试题（扎金花）》 — Livingston&pic=https://github.com/Livingston34/img/avatar.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/&title=《Ubuntu上安装MySQL》 — Livingston&pic=https://github.com/Livingston34/img/avatar.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -423,22 +436,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/&title=《搜狐2016招聘笔试题（扎金花）》 — Livingston&source=两个搜狐的程序员加了一个月班，终于放假了，于是他们决定扎金花渡过愉快的假期 。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/&title=《Ubuntu上安装MySQL》 — Livingston&source=MySQL是流行的数据库系统，下面记录了在Ubuntu 16.04上安装MySQL步骤。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《搜狐2016招聘笔试题（扎金花）》 — Livingston&url=https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/&via=https://github.com/Livingston34" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ubuntu上安装MySQL》 — Livingston&url=https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/&via=https://github.com/Livingston34" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/Livingston34/2018/02/28/搜狐2016招聘笔试题（扎金花）/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/Livingston34/2018/03/06/Ubuntu上安装MySQL/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -449,7 +462,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACw0lEQVR42u3aQW7jQAwEwPz/09lrgKyVbnImcIDSybBlSTWHIUXy4yM+Pr8cz79+Pefz8fh+he+fk7sfOPDw8PAWj548aEJ69ejJ9893bBcODw8P7x7v+fYt4Pn8ZCfPqT9Y8PDw8N6A93xOst23S4CHh4f313l5GMgT9GSx8PDw8N6NlxQjnh8639DPfnOs1oKHh4cX89oCwTt8vtLfw8PDw1t31ZNm/6b0kIef4dPi4eHhXeDlG247WJA3+9v75ufj4eHh3ePlm3geEtqywo2ggoeHh3eDN2tlbcYL2oGAPKGPOnt4eHh4R3ltANgXEfJlyttvL98V8PDw8A7x8l00KdTu/5sXF+qnxcPDwzvE22zibSqcJ+h5c6uYJsPDw8M7ypulxbMA04LbMYX/TEbg4eHhHeXlr/f5MNZ+JGsPw8PDw7vH2xdq2+Q7DzOzgnKxNnh4eHgLXr41t4XX5PyWVLTT8PDw8C7w2iO50Oybtvh7jISHh4e34OVDV7PUeVYpaZPy4u0BDw8Pb8SbXXQWQjbDB8PQgoeHh3eNd6P+mbfH9oNZ0WQEHh4e3iFeWx5NwHmRt13QtgSMh4eHd4OXB4Bk494PBORJdpSg4+Hh4f0KL9+gk809f5RNWComI/Dw8PDWvP24wCwM5Jj8v8NhLzw8PLwRbzMkmifW98azonErPDw8vAu8tiiQBIZZgThfrGg58PDw8K7x8qJt3sSalTNmzbCXZ+Lh4eEd5c1e79stfrbdt/d9OVOGh4eHd5TXjjS1RYe8JJFfLf+Mh4eHd4+XB4O2hLFP0GeBAQ8PD+93eHmRYhZtVvMLcRnih9EBPDw8vDfgtaWBthnWjhQU5Ws8PDy8X+flLfwi/S0HrYqhKzw8PLwLvH3zaZZwJwNVeWBY1Vrw8PDwul13OrFVNu/bwaw2TT9Qz8DDw8N7us4/1CfuA+z6slgAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACyElEQVR42u3awY7jIBAE0Pn/n85Ke1ppFFxFQzaH55OVZAyPkQBX8/MTX6+/17tPXv9cvz/5/W37m3d9OHbh4eHhbXV93di75pOOrju9Hsr1fTJAeHh4ePd4STN5w8kQJE/Of/P2czw8PLz/ymsn93yxWS887SDi4eHhfTMvXx72FgA8PDy8b+a1gcIk9l1vsvOA43DWgoeHhxfz2u5+w/3F+h4eHh7eoKqeLBJtgWovIN678PDw8G7wktJU9MIfz89JPLG3oS/eGPDw8PAGvHZSzsPfPGhoF4PiH4OHh4d3jZdMsjc23+103wa7eHh4eDd466B2/Yi8lNUGxPN4Fw8PD+82rw0g1o9bI5MNen4gIBpKPDw8vKO89ddtsJssGG2LewHHwxsDHh4e3piXT8F7wW4ScESVurbYhoeHh3eZN98iT2KIdimKeouHh4d3gdc2sxciFGWq+FhAMaB4eHh4R3n5a//eMYJJW3lB7u09Hh4e3kd4k0g3+baNaNutfJFS4+Hh4W3x5rvQvOSfLxt5ma0OlPHw8PAO8dpJvy387xWxktYjMB4eHt5R3vrP8gMBex2dl7sehhUPDw/vAi+H7T20DQvWre+1iIeHh3eWNy845TFrEuPmgUi0jOHh4eFd4026uxcZ5J2elMfw8PDwbvD2Dg3MA4I2pGiHGA8PD+8eL3/Jb/eokyUhJz28BuDh4eF9kJcHE+0A5VHvZIjx8PDw7vH2DgHk95Ot9mSwRmcc8PDw8JaKV3m1I9eGv+32+qEVPDw8vAu8vQm3DQjWW+c8qmifjIeHh3ePlxfp8xL+PN7NY5Ei7cDDw8M7ymsDiNvnFybRMB4eHt738JIQNt86J4tKG/sWpS88PDy8D/LyzXGyXd47ClD0Bw8PD+8aby+MyBeDPEpoS2UPw4GHh4d3gbdXAEs202efdqCOh4eHhzfl/QEjuivwB5l+OgAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
