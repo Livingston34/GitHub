@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?042601facf214569404f852760199951"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>koa2实现数据爬虫 | Livingston | “你没车没房没卡,拿什么和我谈恋爱？”“......我有高达......”</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="Koa2制作爬虫的全过程，包括项目建立，使用superagent获取源数据、使用cheerio解析，Json数据返回。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="koa2实现数据爬虫">
+<meta property="og:url" content="https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/index.html">
+<meta property="og:site_name" content="Livingston">
+<meta property="og:description" content="Koa2制作爬虫的全过程，包括项目建立，使用superagent获取源数据、使用cheerio解析，Json数据返回。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-06T08:59:36.474Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="koa2实现数据爬虫">
+<meta name="twitter:description" content="Koa2制作爬虫的全过程，包括项目建立，使用superagent获取源数据、使用cheerio解析，Json数据返回。">
+    
+        <link rel="alternate" type="application/atom+xml" title="Livingston" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">杨霁</h5>
+          <a href="mailto:livingston34@126.com" title="livingston34@126.com" class="mail">livingston34@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Livingston34" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">koa2实现数据爬虫</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">koa2实现数据爬虫</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-06T08:31:39.619Z" itemprop="datePublished" class="page-time">
+  2018-03-06
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#项目建立"><span class="post-toc-number">1.</span> <span class="post-toc-text">项目建立</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装脚手架"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">安装脚手架</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建项目"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">创建项目</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#运行项目"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">运行项目</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#superagent应用"><span class="post-toc-number">2.</span> <span class="post-toc-text">superagent应用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#cheerio应用"><span class="post-toc-number">3.</span> <span class="post-toc-text">cheerio应用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-1"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-1"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#项目地址"><span class="post-toc-number">4.</span> <span class="post-toc-text">项目地址</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-koa2实现数据爬虫"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">koa2实现数据爬虫</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-06 16:31:39" datetime="2018-03-06T08:31:39.619Z"  itemprop="datePublished">2018-03-06</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <script src="\assets\js\APlayer.min.js"> </script><p>Koa2制作爬虫的全过程，包括项目建立，使用superagent获取源数据、使用cheerio解析，Json数据返回。<br><a id="more"></a></p>
+<h1 id="项目建立"><a href="#项目建立" class="headerlink" title="项目建立"></a>项目建立</h1><h2 id="安装脚手架"><a href="#安装脚手架" class="headerlink" title="安装脚手架"></a>安装脚手架</h2><blockquote>
+<p>npm install -g koa-generator</p>
+</blockquote>
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><blockquote>
+<p>koa2 koaCrawler </p>
+</blockquote>
+<h2 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h2><blockquote>
+<p>cd koaCrawler<br>npm install<br>npm start</p>
+</blockquote>
+<h1 id="superagent应用"><a href="#superagent应用" class="headerlink" title="superagent应用"></a>superagent应用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>npm install superagent</p>
+</blockquote>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const superagent = require(&apos;superagent&apos;);</span><br><span class="line">const getData = async () =&gt; &#123;</span><br><span class="line">	return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">		var items = [];</span><br><span class="line">		superagent</span><br><span class="line">			.get(&apos;http://ny.gold600.com/&apos;)</span><br><span class="line">			.end(function(err, res) &#123;</span><br><span class="line">				if (err) reject(err);</span><br><span class="line">				resolve(res.text);			</span><br><span class="line">			&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="cheerio应用"><a href="#cheerio应用" class="headerlink" title="cheerio应用"></a>cheerio应用</h1><blockquote>
+<p>具体使用Google一下</p>
+</blockquote>
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>npm install cheerio</p>
+</blockquote>
+<h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const $ = cheerio.load(res.text);</span><br><span class="line">$(&apos;.oilTable tbody tr:nth-child(odd)&apos;).each(function(i, elem) &#123;</span><br><span class="line">    let _this = $(elem);</span><br><span class="line">	let s = &#123;</span><br><span class="line">		city: _this.find(&apos;a&apos;).text().replace(/\s/g,&apos;&apos;),</span><br><span class="line">		price90: $(_this.find(&apos;td&apos;)[1]).text().replace(/\s/g,&apos;&apos;),</span><br><span class="line">		price93: $(_this.find(&apos;td&apos;)[2]).text().replace(/\s/g,&apos;&apos;),</span><br><span class="line">		price97: $(_this.find(&apos;td&apos;)[3]).text().replace(/\s/g,&apos;&apos;)</span><br><span class="line">	&#125;</span><br><span class="line">	items.push(s);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h1><blockquote>
+<p><a href="https://github.com/Livingston34/koaCrawler">https://github.com/Livingston34/koaCrawler</a></p>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-03-06T08:59:36.474Z" itemprop="dateUpdated">2018-03-06 16:59:36</time>
+</span><br>
+
+
+    </div>
+    
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/&title=《koa2实现数据爬虫》 — Livingston&pic=https://github.com/Livingston34/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/&title=《koa2实现数据爬虫》 — Livingston&source=Koa2制作爬虫的全过程，包括项目建立，使用superagent获取源数据、使用cheerio解析，Json数据返回。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《koa2实现数据爬虫》 — Livingston&url=https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/&via=https://github.com/Livingston34" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/06/Ubuntu上安装MySQL/" id="post-next" class="post-nav-link">
+        <div class="tips">下一篇 <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Ubuntu上安装MySQL</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDQ1Mi8xMDk4OQ==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷打赏
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?042601facf214569404f852760199951"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    </div>
+    <div class="bottom">
+        <p><span>杨霁 &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/&title=《koa2实现数据爬虫》 — Livingston&pic=https://github.com/Livingston34/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/&title=《koa2实现数据爬虫》 — Livingston&source=Koa2制作爬虫的全过程，包括项目建立，使用superagent获取源数据、使用cheerio解析，Json数据返回。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《koa2实现数据爬虫》 — Livingston&url=https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/&via=https://github.com/Livingston34" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/Livingston34/2018/03/06/koa2实现数据爬虫/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACu0lEQVR42u3aMXLDMAwEQP//007rIrLuQNJxZlaVJ4kirgoSPuDxiK/ny/X6k+Tz1ZX8zdVdmy88PDy8haUni2jZyYuYvdDoFeDh4eEd4109IF90e1QkpGQ9NxY8PDy8L+Dlm/jVQZL8z6sDAA8PD+8/8vISuS2m18txPDw8vE/ykjAiT02T+CApo5ODZ1vWgoeHh3egi/Q9n4/09/Dw8PCWu+orzf668C3D4mgNeHh4eAd4K3FqG0PMivW2XMbDw8P7W147htWOFLw/KlYiXTw8PLzTvDaMyIcDknvfb/15yLsta8HDw8N7y2tbSrMNeqUgXinW8fDw8E7wkqb+bNOfHTbtsTRsg+Hh4eEd4LWtr1l025baw9ErPDw8vK28ujwdbehJCZ4/sVgVHh4e3jFeGzG0RXl+DLRNuJuXiIeHh3eM17bBVoYJVo6TtpTHw8PD+wxv77Y+C4vb0YTLwwwPDw/vGC8h5Zh8E58V5cXxg4eHh/cRXh62tmXubKxqFojg4eHhneblBWteWLcHQNv02hBG4OHh4Y14s8I6f2Q7CjAbzLp5cXh4eHhbebOyONnKZ3HDLMAthq7w8PDwNvHeb/QrwevsFawnCb98Y8DDw8PbxGuj1TaunY1qtSMCN/fi4eHhHebNjof1+DUfQaiHwPDw8PCO8fKlJ+2rDRt6ubY6I8HDw8PbxGuD3Vl028YQS0U2Hh4e3sd5bfm70rKaHTl1GwwPDw9vgfcsr1ljbGWoK5oau/otHh4e3gFeu+HmcWpSLs/A+Wc8PDy8c7x8K28D2fxgSMrrbf09PDw8vE28lWg1/20bT6w08PDw8PC+jZd/7W/DjvzpUQyBh4eH9wW8PETIS/N8PfkLwsPDwzvNa5teeRyQt7XaqKKYjMDDw8Pbymu/8LehbVIKz5pwj10XHh4eXnrXD3wrK/DdgPNBAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '终于知道死回来啊!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
