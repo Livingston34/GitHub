@@ -395,34 +395,28 @@
 
 
 
-        <div id="aplayer1" class="aplayer"></div>
+        <div id="aplayer1" class="aplayer" style=""></div>
 
 <script src="//unpkg.com/aplayer@1.6.0/dist/APlayer.min.js"></script>
 
 <script>
     var ap = new APlayer({
 	    element: document.getElementById('aplayer1'),
-	    music: [
-			{
-	            "title": "Même si c'est très loin",
-	            "author": "Fréro Delavega",
-	            "url": "https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.mp3",
-	            "pic": 'https://moeplayer.b0.upaiyun.com/aplayer/yuruyuri.jpg'
-	        },
-	        {
-	            "title": "Säkkijärven polkka",
-	            "author": "浜口史郎",
-	            "url": "https://moeplayer.b0.upaiyun.com/aplayer/secretbase.mp3",
-	            "pic": 'https://moeplayer.b0.upaiyun.com/aplayer/secretbase.jpg'
-	        },
-	        {
-	            title: '回レ！雪月花',
-	            author: '小倉唯',
-	            url: 'https://moeplayer.b0.upaiyun.com/aplayer/snowmoonflowers.mp3',
-	            pic: 'https://moeplayer.b0.upaiyun.com/aplayer/snowmoonflowers.jpg'
-	        }	        		
-        ]
+	    narrow: false,
+	    autoplay: true,
+	    showlrc: 0,
+	    mutex: true,
+	    theme: '#e6d0b2',
+	    mode: 'random',
+	    preload: 'metadata', 
+	    music: {
+            "title": "Säkkijärven polkka",
+            "author": "浜口史郎",
+            "url": "http://dl.stream.qqmusic.qq.com/C400002tfbql3DrAe8.m4a?guid=2333409968&vkey=6689B7DEB0A7FD919AF448D49047066A1418F1B7DBCD85C9DF9428BC05BB3919DDF97F13013A890AA6C94AEE7B053936AAB28663DE53AA67&uin=0&fromtag=999",
+            "pic": 'https://moeplayer.b0.upaiyun.com/aplayer/secretbase.jpg'
+        }
 	});
+	ap.play();
 </script>
 
     </div>
