@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?042601facf214569404f852760199951"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>JavaScript(a==1 &amp;&amp; a==2 &amp;&amp; a==3)能输出ture么？ | Livingston | “你没车没房没卡,拿什么和我谈恋爱？”“......我有高达......”</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JS">
+    <meta name="description" content="前言有人会说，这个问题好奇葩，放在别的语言里，这要是能输出true，估计是见鬼了，但是你别说，放在js中好真有可能。最近在一个人的推特上提了一个问题：  问题：Can (a==1 &amp;amp;&amp;amp; a==2 &amp;amp;&amp;amp; a==3) ever evaluate to true? 答案：yes">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript(a==1 &amp;&amp; a==2 &amp;&amp; a==3)能输出ture么？">
+<meta property="og:url" content="https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/index.html">
+<meta property="og:site_name" content="Livingston">
+<meta property="og:description" content="前言有人会说，这个问题好奇葩，放在别的语言里，这要是能输出true，估计是见鬼了，但是你别说，放在js中好真有可能。最近在一个人的推特上提了一个问题：  问题：Can (a==1 &amp;amp;&amp;amp; a==2 &amp;amp;&amp;amp; a==3) ever evaluate to true? 答案：yes">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://laihuamin.oss-cn-beijing.aliyuncs.com/twitter1.png">
+<meta property="og:updated_time" content="2018-03-19T10:31:14.257Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript(a==1 &amp;&amp; a==2 &amp;&amp; a==3)能输出ture么？">
+<meta name="twitter:description" content="前言有人会说，这个问题好奇葩，放在别的语言里，这要是能输出true，估计是见鬼了，但是你别说，放在js中好真有可能。最近在一个人的推特上提了一个问题：  问题：Can (a==1 &amp;amp;&amp;amp; a==2 &amp;amp;&amp;amp; a==3) ever evaluate to true? 答案：yes">
+<meta name="twitter:image" content="http://laihuamin.oss-cn-beijing.aliyuncs.com/twitter1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Livingston" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">杨霁</h5>
+          <a href="mailto:livingston34@126.com" title="livingston34@126.com" class="mail">livingston34@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Livingston34" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JavaScript(a==1 &amp;&amp; a==2 &amp;&amp; a==3)能输出ture么？</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JavaScript(a==1 &amp;&amp; a==2 &amp;&amp; a==3)能输出ture么？</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-19T10:14:40.018Z" itemprop="datePublished" class="page-time">
+  2018-03-19
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#有什么窍门呢？"><span class="post-toc-number">2.</span> <span class="post-toc-text">有什么窍门呢？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#隐式转换"><span class="post-toc-number">3.</span> <span class="post-toc-text">隐式转换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#valueOf-NaN"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">valueOf</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-JavaScript(a==1 &amp;&amp; a==2 &amp;&amp; a==3)能输出ture么？"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JavaScript(a==1 && a==2 && a==3)能输出ture么？</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-19 18:14:40" datetime="2018-03-19T10:14:40.018Z"  itemprop="datePublished">2018-03-19</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <script src="\assets\js\APlayer.min.js"> </script><a id="more"></a>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>有人会说，这个问题好奇葩，放在别的语言里，这要是能输出true，估计是见鬼了，<br>但是你别说，放在js中好真有可能。最近在一个人的推特上提了一个问题：</p>
+<ul>
+<li>问题：Can (a==1 &amp;&amp; a==2 &amp;&amp; a==3) ever evaluate to true?</li>
+<li>答案：yes</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://laihuamin.oss-cn-beijing.aliyuncs.com/twitter1.png" alt="question" title="">
+                </div>
+                <div class="image-caption">question</div>
+            </figure>
+<p>在这篇文章中，我将解释这段代码的原理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const a = &#123;</span><br><span class="line">  num: 0,</span><br><span class="line">  valueOf: function() &#123;</span><br><span class="line">    return this.num += 1</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">const equality = (a==1 &amp;&amp; a==2 &amp;&amp; a==3);</span><br><span class="line">console.log(equality); // true</span><br></pre></td></tr></table></figure>
+<p>你可以打开chorme浏览器，然后打开开发者模式，在console中输入这段代码，你就<br>可以看到输出结果([windows]: Ctrl + Shift + J [mac]: Cmd + Opt + J)</p>
+<h1 id="有什么窍门呢？"><a href="#有什么窍门呢？" class="headerlink" title="有什么窍门呢？"></a>有什么窍门呢？</h1><p>其实也没有，能有的就是js中的两个概念：</p>
+<ul>
+<li>隐式转换</li>
+<li>object的valueOf函数</li>
+</ul>
+<h1 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h1><p>注意：这题里面我们用的是==而不是===，在js中==代表的是等于而不是全等，那么<br>就存在变量的隐式转化问题。这就意味着结果会比我们所期望的更多的可能性。<br>对于js的隐式转化，真的有很多文章，我推荐一下以下几篇博客，如果你想要了解，<br>可以点进去：</p>
+<h2 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf"></a>valueOf</h2><p>JavaScript提供了一种将对象转化为原始值的方法：Object.prototype.valueOf()，默认情况下，返回正在被调用的对象。<br>我们举个例子:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const a = &#123;</span><br><span class="line">  num: 0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们可以对上述对象使用valueOf方法，他会返回一个对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.valueOf();</span><br><span class="line">// &#123;num: 0&#125;</span><br></pre></td></tr></table></figure>
+<p>是不是很酷，我们可以用typeOf来检测一下这个输出结果的类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">typeof a.valueOf();</span><br><span class="line">// &quot;object&quot;</span><br></pre></td></tr></table></figure>
+<p>为了让valueOf可以更方便将一个对象转化成原始值，我们可以重写他，<br>换种说法就是我们可以通过valueOf来返回一个字符串、数字、布尔值<br>等来代替一个对象，我们可以看以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a.valueOf = function() &#123;</span><br><span class="line">  return this.num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们已经重写了原生的valueOf()方法，当我们调用valueOf的时候，<br>他会返回a.num。那我们现在运行以下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.valueOf();</span><br><span class="line">// 0</span><br></pre></td></tr></table></figure>
+<p>我们得到0了，这很合理，因为0就是赋给a.num的值。那我们可以来做几个测试：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">typeof a.valueOf();</span><br><span class="line">// &quot;number&quot;</span><br><span class="line"></span><br><span class="line">a.num == a.valueOf()</span><br><span class="line">// true</span><br></pre></td></tr></table></figure>
+<p>很好，但为什么这个很重要呢？</p>
+<p>这很重要，因为当你两种不同类型的遇到相等操作符的时候，js会对其进行类型<br>转化——它企图将操作数的类型转化为类似的。</p>
+<p>在我们的问题中：(a==1 &amp;&amp; a==2 &amp;&amp; a==3)JavaScript会企图将对象转化成数字的类型，进行比较。当要转化的是一个Object<br>的时候，JavaScript会调用valueOf()方法。</p>
+<p>自从我们改变了valueOf()方法之后，我们能不能做到以下几点呢：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a == 0</span><br><span class="line"></span><br><span class="line">// true</span><br></pre></td></tr></table></figure>
+<p>我们做到了，异常轻松。</p>
+<p>现在我们需要做的的一点是：当我们每次去调用a的值的时候，能改变它。</p>
+<p>幸运的是，在JavaScript中有+=符号。</p>
+<p>+=这个运算符可以轻松的去改变一个的值，我们可以举个简单的例子:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let b = 1</span><br><span class="line">console.log(b+=1); // 2</span><br><span class="line">console.log(b+=1); // 3</span><br><span class="line">console.log(b+=1); // 4</span><br></pre></td></tr></table></figure>
+<p>正如你所见的，我们每次使用加法赋值运算符，可以让我们的变量增加。</p>
+<p>所以我们可以将这个观念用到valueOf()中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a.valueOf = function() &#123;</span><br><span class="line">  return this.num += 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当我们每次调用valueOf的时候，他会将变量增加1返回给我们。</p>
+<p>随着这个改变，我们来运行下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const equality = (a==1 &amp;&amp; a==2 &amp;&amp; a==3);</span><br><span class="line">console.log(equality); // true</span><br></pre></td></tr></table></figure>
+<p>这就是它的工作原理。</p>
+<p>记住下面两点:</p>
+<ul>
+<li>使用相等操作符，js会做强制类型转化</li>
+<li>我们的对象每次调用valueOf()它的值会增加1</li>
+</ul>
+<p>所以比较的时候我们每次都能得到true。</p>
+<ul>
+<li>补充第二点的运算过程</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a                     == 1   -&gt; </span><br><span class="line">a.valueOf()           == 1   -&gt; </span><br><span class="line">a.num += 1            == 1   -&gt; </span><br><span class="line">0     += 1            == 1   -&gt;</span><br><span class="line">1                     == 1   -&gt; true</span><br><span class="line">a                     == 2   -&gt; </span><br><span class="line">a.valueOf()           == 2   -&gt; </span><br><span class="line">a.num += 1            == 2   -&gt; </span><br><span class="line">1     += 1            == 2   -&gt;</span><br><span class="line">2                     == 2   -&gt; true</span><br><span class="line">a                     == 3   -&gt; </span><br><span class="line">a.valueOf()           == 3   -&gt; </span><br><span class="line">a.num += 1            == 3   -&gt; </span><br><span class="line">2     += 1            == 3   -&gt;</span><br><span class="line">3                     == 3   -&gt; true</span><br></pre></td></tr></table></figure>
+<p>感谢原作者的分享，我是copy的，这是<a href="https://segmentfault.com/a/1190000012921114" target="_blank" rel="noopener">原文链接</a>。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-03-19T10:31:14.257Z" itemprop="dateUpdated">2018-03-19 18:31:14</time>
+</span><br>
+
+
+    </div>
+    
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/&title=《JavaScript(a==1 && a==2 && a==3)能输出ture么？》 — Livingston&pic=https://github.com/Livingston34/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/&title=《JavaScript(a==1 && a==2 && a==3)能输出ture么？》 — Livingston&source=“你没车没房没卡,拿什么和我谈恋爱？”“......我有高达......”" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript(a==1 && a==2 && a==3)能输出ture么？》 — Livingston&url=https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/&via=https://github.com/Livingston34" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/06/koa2实现数据爬虫/" id="post-next" class="post-nav-link">
+        <div class="tips">下一篇 <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">koa2实现数据爬虫</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDQ1Mi8xMDk4OQ==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷打赏
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?042601facf214569404f852760199951"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+        <div id="aplayer1" class="aplayer" style="display:none;"></div>
+
+<script src="//unpkg.com/aplayer@1.6.0/dist/APlayer.min.js"></script>
+ 
+<script>
+    var ap = new APlayer({
+	    element: document.getElementById('aplayer1'),
+	    narrow: false,
+	    autoplay: true,
+	    showlrc: 0,
+	    mutex: true,
+	    theme: '#e6d0b2',
+	    mode: 'random',
+	    preload: 'metadata', 
+	    music: {
+            "title": "Secret Base ～君がくれたもの～",
+            "author": "茅野愛衣",
+            "url": "http://dl.stream.qqmusic.qq.com/C400002tfbql3DrAe8.m4a?guid=2333409968&vkey=6689B7DEB0A7FD919AF448D49047066A1418F1B7DBCD85C9DF9428BC05BB3919DDF97F13013A890AA6C94AEE7B053936AAB28663DE53AA67&uin=0&fromtag=999",
+            "pic": 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002draSy1vFUH2.jpg?max_age=2592000'
+        }
+	});
+	ap.play();
+</script>
+
+    </div>
+    <div class="bottom">
+        <p><span>杨霁 &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/&title=《JavaScript(a==1 && a==2 && a==3)能输出ture么？》 — Livingston&pic=https://github.com/Livingston34/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/&title=《JavaScript(a==1 && a==2 && a==3)能输出ture么？》 — Livingston&source=“你没车没房没卡,拿什么和我谈恋爱？”“......我有高达......”" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript(a==1 && a==2 && a==3)能输出ture么？》 — Livingston&url=https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/&via=https://github.com/Livingston34" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/Livingston34/2018/03/19/JavaScript(a==1 && a==2 && a==3)能输出ture么？/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADJklEQVR42u3awY7iQAwE0Pn/n2alvY7IVLmDBOblNGID6dc5eO3qn5/4evy/rj959q+PX9fvO3/ff/2U69+87cLGxsb+EPbj8rp+zLN78q25XvpsPdcWbGxs7K3spAg947Vbkz/lZJ1/fBcbGxv7K9knbcN1gbkuXXe1LtjY2NjYJyUtaRWSooWNjY2NfTJUyhuGWVlqfycvkNjY2Ni72W3Q+85/vzDfxsbGxn5L9uP4an+nbVHa4VS0BmxsbOxF7NlByaRVmDUV5wFzcXgIGxsbexE7iXLzAU3Lyzc93yZsbGzs72G3RSgZ4uSxa/5O8rAhuhMbGxt7Hbv9b/1s0n5XqHy95rr3wsbGxl7BvuvYzfkov30Zyf3Y2NjY38CeHX+cHXZsR/mzkdb14AkbGxv7G9izAjYbNp2EBO0rwcbGxt7Kzo/p5IFrvZQyPDhphLCxsbH3sdui0rKTDT2nFuMnbGxs7EXs2WgpDxVmI6f26E8+6joKCbCxsbHfkv2K8VDerszGSScFEhsbG3sre1Yk8ri3pc7GVcVKsLGxsRexT0ZI501CS8ojiqIDw8bGxl7KThqDvFDljU3b8OTfxcbGxt7KPh/9ty3BSSDRFrZiloaNjY29jn1CnTUM+ed5y/F0tdjY2NiL2LMw4HqDZkXxrgA4L8DY2NjYO9jJUcgiOh0VtrsC5rwkY2NjY29i5xlC+0m+KTn1JJDGxsbG3sqeje/bUX57pPIVgfHTeAAbGxt7Bfv6kckYqA1620g4fzFR44SNjY29jj1LEmbDoHa5s9Dij2KJjY2NvYg9C0pnse6sQOZbcLRl2NjY2B/LzgtYHg/khS0vYPkTb25FsLGxsd+efdJg5AWsDR5m8UBe0rCxsbE3sR/l1S6rDYnbpmW4NdjY2NiL2G0xOPl7FhK3Z2xmB4+wsbGxP53dDv3bSGD2C3n8PFwVNjY29jp2PtxpW4V8a9qXMQutsbGxsbHbwpOXtza+PRpOYWNjY38l+6TNyGvHLFTIWxRsbGzsrex2qPSKgdEsWmjXj42Njb2P3Qa9eRybfPckGDgqYNjY2Ngb2P8Ag6kmOYCwXAkAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '终于知道死回来啊!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
