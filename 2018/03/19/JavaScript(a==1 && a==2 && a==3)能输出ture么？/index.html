@@ -34,7 +34,7 @@
 <meta property="og:description" content="前言有人会说，这个问题好奇葩，放在别的语言里，这要是能输出true，估计是见鬼了，但是你别说，放在js中好真有可能。最近在一个人的推特上提了一个问题：  问题：Can (a==1 &amp;amp;&amp;amp; a==2 &amp;amp;&amp;amp; a==3) ever evaluate to true? 答案：yes">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://laihuamin.oss-cn-beijing.aliyuncs.com/twitter1.png">
-<meta property="og:updated_time" content="2018-03-19T10:31:14.257Z">
+<meta property="og:updated_time" content="2018-03-19T10:34:31.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript(a==1 &amp;&amp; a==2 &amp;&amp; a==3)能输出ture么？">
 <meta name="twitter:description" content="前言有人会说，这个问题好奇葩，放在别的语言里，这要是能输出true，估计是见鬼了，但是你别说，放在js中好真有可能。最近在一个人的推特上提了一个问题：  问题：Can (a==1 &amp;amp;&amp;amp; a==2 &amp;amp;&amp;amp; a==3) ever evaluate to true? 答案：yes">
@@ -166,7 +166,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>目录</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#有什么窍门呢？"><span class="post-toc-number">2.</span> <span class="post-toc-text">有什么窍门呢？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#隐式转换"><span class="post-toc-number">3.</span> <span class="post-toc-text">隐式转换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#valueOf-NaN"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">valueOf</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#有什么窍门呢？"><span class="post-toc-number">2.</span> <span class="post-toc-text">有什么窍门呢？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#隐式转换"><span class="post-toc-number">3.</span> <span class="post-toc-text">隐式转换</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#valueOf-NaN"><span class="post-toc-number">4.</span> <span class="post-toc-text">valueOf</span></a></li></ol>
         </nav>
     </aside>
 
@@ -212,7 +212,7 @@
 <li>object的valueOf函数</li>
 </ul>
 <h1 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h1><p>注意：这题里面我们用的是==而不是===，在js中==代表的是等于而不是全等，那么<br>就存在变量的隐式转化问题。这就意味着结果会比我们所期望的更多的可能性。<br>对于js的隐式转化，真的有很多文章，我推荐一下以下几篇博客，如果你想要了解，<br>可以点进去：</p>
-<h2 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf"></a>valueOf</h2><p>JavaScript提供了一种将对象转化为原始值的方法：Object.prototype.valueOf()，默认情况下，返回正在被调用的对象。<br>我们举个例子:</p>
+<h1 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf"></a>valueOf</h1><p>JavaScript提供了一种将对象转化为原始值的方法：Object.prototype.valueOf()，默认情况下，返回正在被调用的对象。<br>我们举个例子:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const a = &#123;</span><br><span class="line">  num: 0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>我们可以对上述对象使用valueOf方法，他会返回一个对象。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.valueOf();</span><br><span class="line">// &#123;num: 0&#125;</span><br></pre></td></tr></table></figure>
@@ -260,7 +260,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-03-19T10:31:14.257Z" itemprop="dateUpdated">2018-03-19 18:31:14</time>
+    最后更新时间：<time datetime="2018-03-19T10:34:31.846Z" itemprop="dateUpdated">2018-03-19 18:34:31</time>
 </span><br>
 
 
